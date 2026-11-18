@@ -44,6 +44,16 @@ provide the ability to control your spa. This functionality is local only.
 
 # Version History
 
+## v0.1.34b1 (fork pre-release)
+ - Use the local date instead of the UTC date for reminders, so due dates no longer
+   jump by a day between local midnight and UTC midnight
+   ([#252](https://github.com/gazoodle/gecko-home-assistant/pull/252))
+ - Enable long-term statistics for the spa water temperature
+   ([#259](https://github.com/gazoodle/gecko-home-assistant/pull/259))
+ - Remove the deprecated `CONNECTION_CLASS` from the config flow, which Home Assistant
+   removes in 2027.5; `iot_class` in the manifest already covers it
+   ([#260](https://github.com/gazoodle/gecko-home-assistant/issues/260))
+
 ## v0.1.33
  - Bump geckolib to 1.0.16, which fixes the silent loss of the spa push subscription that
    left entities stale for hours while the spa still showed as connected
